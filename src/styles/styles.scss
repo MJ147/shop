@@ -17,9 +17,9 @@ html {
 body {
     color:#212121;
     background-color: #f3f3f3;
-    font-family: mat-font-family($app-typograpchy);
-    line-height: mat-font-height($app-typograpchy, body-1);
-    font-size: mat-font-size($app-typograpchy, body-1);
+    font-family: mat-font-family($app-typography);
+    line-height: mat-line-height($app-typography, body-1);
+    font-size: mat-font-size($app-typography, body-1);
     height: 100%;
     margin: 0;
 }

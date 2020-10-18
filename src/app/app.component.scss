@@ -1,0 +1,38 @@
+@import '../styles/theme';
+
+:host {
+    display: block;
+    height: 100%;
+}
+
+.toolbar {
+    background-color: mat-color($app-background, card);
+    position: relative;
+    box-shadow: 0 1px mat-color($app-foreground, divider);
+}
+
+.toolbar_logo-title-group {
+    position: absolute;
+    right: 50%;
+    left: 50%;
+}
+
+.toolbar_logo {
+    height: 32px;
+    margin-right: 16px;
+}
+
+.toolbar_title {
+    color: mat-color($app-foreground, text);
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.toolbar_icon-button {
+    color: mat-color($app-foreground, icon);
+}
+
+.toolbar_shopping-cart-button {
+    margin-right: 8px;
+}
