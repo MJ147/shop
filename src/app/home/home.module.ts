@@ -6,14 +6,16 @@ import { RouterModule } from '@angular/router';
 import { MatGridListModule } from '@angular/material/grid-list';
 
 @NgModule({
-  declarations: [HomeComponent],
   imports: [
     CommonModule,
     RouterModule.forChild([
-      { path: '', component: HomeComponent}
+      { path: '', component: HomeComponent }
     ]),
     FlexLayoutModule,
     MatGridListModule
+  ],
+  declarations: [
+    HomeComponent
   ]
 })
-export class HomeModule { }
+export class HomeModule {}
