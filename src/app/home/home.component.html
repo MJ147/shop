@@ -1,1 +1,25 @@
-<p>home works!</p>
+<div class="grid-list-container">
+    <mat-grid-list [cols]="columns$ | async" gutterSize="16">
+        <mat-grid-tile class="tile" *ngFor="let product of products$ | async">
+            <a class="tile_content"
+               fxLayout="column"
+               fxLayoutAlign="center center"
+               [routerLink]="['/products', product.id]"
+            >
+                <span class="tile_price-tag" ngClass.xs="tile_price-tag--xs">
+                    {{ product.price | currency: 'USD': 'symbol':'.0' }}
+                </span>
+
+                <div class="tile_thumbnail"
+                     [ngStyle]="{'backgorund-image': 'url(' + product.imageUrl + ')'}"></div>
+
+                <div class="tile_title"
+                     ngClass.xs="tile_title--xs"
+                     ngClass.sm="tile_title--sm"
+                >
+                    {{ product.title}}
+                </div>
+            </a>
+        </mat-grid-tile>
+    </mat-grid-list>
+</div>

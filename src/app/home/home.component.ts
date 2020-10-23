@@ -22,10 +22,10 @@ export class HomeComponent {
     [ 'xl', 5 ],
   ]);
 
-  constructor(private _media: MediaObserver,
-              private _productService: ProductService) {
-    this.products$ = this._productService.allProducts;
-    this.columns$ = this._media.asObservable().pipe(map(m => this.breakpointsToColumnNumber.get(m[0].mqAlias ) as number
-    );
+  constructor(private _media: MediaObserver, private _productService: ProductService) {
+      this.products$ = this._productService.allProducts;
+      this.columns$ = this._media.asObservable().pipe(map(m => this.breakpointsToColumnNumber.get(m[0].mqAlias ) as number
+    ));
   }
+
 }

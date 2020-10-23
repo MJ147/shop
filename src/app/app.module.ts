@@ -8,13 +8,17 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { ProductService } from './services/product.service';
+import { RouterModule } from '@angular/router';
+import { routes } from './app.routing';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+
   ],
   imports: [
     BrowserModule,
+    RouterModule.forRoot(routes),
     MatButtonModule,
     MatButtonModule,
     MatIconModule,

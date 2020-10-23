@@ -5,8 +5,6 @@ import { HomeComponent } from './home.component';
 import { RouterModule } from '@angular/router';
 import { MatGridListModule } from '@angular/material/grid-list';
 
-
-
 @NgModule({
   declarations: [HomeComponent],
   imports: [
