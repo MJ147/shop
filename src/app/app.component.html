@@ -1,18 +1,27 @@
-<mat-toolbar class="toolbar">
-  <button class="toolbar_icon-button" mat-icon-button>
-   <mat-icon>menu</mat-icon>
-  </button>
+<mat-sidenav-container>
+	<mat-sidenav #sidenav>
+		<app-search-form (search)="sidenav.close()"></app-search-form>
+	</mat-sidenav>
 
-  <div class="toolbar_logo-title-group" fxLayout fxLayoutAlign="center center">
-    <a routerLink="/" fxLayout>
-      <mat-icon>shopping_cart</mat-icon>
-    </a>
-    <a class="toolbar_title" routerLink="/">Online Shop</a>
-  </div>
-  <div fxFlex></div>
-  <button mat-icon-button class="toolbar_icon-button toolbar_shopping-card-button">
-    <mat-icon>shopping_cart</mat-icon>
-  </button>
-</mat-toolbar>
+	<mat-toolbar class="toolbar">
+		<button mat-icon-button class="toolbar__icon-button" (click)="sidenav.toggle()">
+			<mat-icon>search</mat-icon>
+		</button>
 
-<router-outlet></router-outlet>
+		<div class="toolbar__logo-title-group" fxLayout fxLayoutAlign="center center">
+			<a routerLink="/" fxLayout>
+				<!-- <img class="toolbar__logo" src="/assets/logo.svg" alt="Logo" /> -->
+				<mat-icon class="toolbar__logo">pest_control_rodent</mat-icon>
+			</a>
+			<a class="toolbar__title" routerLink="/">Fikarm</a>
+		</div>
+
+		<div fxFlex></div>
+
+		<button mat-icon-button class="toolbar__icon-button toolbar__shopping-cart-button">
+			<mat-icon>shopping_cart</mat-icon>
+		</button>
+	</mat-toolbar>
+
+	<router-outlet></router-outlet>
+</mat-sidenav-container>
